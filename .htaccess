@@ -1,0 +1,19 @@
+<Files ~ "^.(htaccess|htpasswd)$">
+order deny,allow
+deny from all
+</Files>
+
+# BEGIN URL
+
+ErrorDocument 401 http://www.yunji.gov.cn/
+ErrorDocument 403 http://www.yunji.gov.cn/
+ErrorDocument 404 http://www.yunji.gov.cn/
+ErrorDocument 500 http://www.yunji.gov.cn/
+
+Redirect 301 /xxgkml/ http://www.hengnan.gov.cn/xxgkml/
+Redirect 301 /main/ http://www.hengnan.gov.cn/main/
+
+# END URL
+
+# Prevent directory indexing
+Options -Indexes
